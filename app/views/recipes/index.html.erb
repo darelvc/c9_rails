@@ -15,6 +15,7 @@
 			<p>
 				<span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %> ago</small></span>
 			</p>
+			<%= render 'shared/likes', obj: recipe %>
 		</div>
 		<div class="col-md-4">
 			<%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture? %>

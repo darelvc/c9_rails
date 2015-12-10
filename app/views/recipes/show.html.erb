@@ -18,6 +18,7 @@
 				<strong>Steps:</strong>
 			</p>
 			<%= simple_format(@recipe.description) %>
+			<%= render 'shared/likes', obj: @recipe %>
 		</div>
 	</div>
 </div>
