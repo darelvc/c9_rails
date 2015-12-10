@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # delete '/recipes/:id', to: 'recipes#destroy', as: 'delete_recipe'
 
   resources :recipes
+  
 end
