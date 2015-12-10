@@ -14,4 +14,5 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require rails_admin/custom/ckeditor_ajax
 //= require_tree .

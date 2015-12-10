@@ -11,6 +11,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 gem 'rails_admin', '~> 0.8.1'
+gem 'ckeditor'
+gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
