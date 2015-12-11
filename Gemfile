@@ -14,6 +14,7 @@ gem 'rails_admin', '~> 0.8.1'
 gem 'ckeditor'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
+gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

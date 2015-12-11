@@ -35,17 +35,17 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.model Recipe do
-    edit do
+ # config.model Recipe do
+ #   edit do
       # For RailsAdmin >= 0.5.0
-      field :name
-      field :summary
-      field :description, :ck_editor
+ #    field :name
+ #    field :summary
+    #  field :description, :ck_editor
       # For RailsAdmin < 0.5.0
       # field :description do
       #   ckeditor true
       # end
-      field :picture
-    end
-  end
+   #   field :picture
+  #  end
+  #end
 end
