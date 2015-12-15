@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151210140830) do
+ActiveRecord::Schema.define(version: 20151215094227) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "chefname"
@@ -37,12 +37,26 @@ ActiveRecord::Schema.define(version: 20151210140830) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "likes", force: :cascade do |t|
     t.boolean  "like"
     t.integer  "chef_id"
     t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "recipe_ingredients", force: :cascade do |t|
+    t.integer "ingredient_id"
+    t.integer "recipe_id"
+  end
+
+  create_table "recipe_styles", force: :cascade do |t|
+    t.integer "style_id"
+    t.integer "recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -53,6 +67,10 @@ ActiveRecord::Schema.define(version: 20151210140830) do
     t.datetime "updated_at"
     t.integer  "chef_id"
     t.string   "picture"
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "name"
   end
 
 end
