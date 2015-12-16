@@ -1,4 +1,6 @@
 class StylesController < ApplicationController
+	before_action :require_user, except: [:show]
+	#before_action :require_same_user, only: [:edit, :update]
 
 	def show
 		@style = Style.find(params[:id])

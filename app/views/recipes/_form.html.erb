@@ -10,7 +10,13 @@
 			<%= f.text_field :summary %>
 
 			<%= f.label :description %>
-			<%= f.cktext_area :description, rows: 10, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+			<%= f.cktext_area :description, rows: 10 %>
+
+			<strong>Styles:</strong>
+			<%= f.collection_check_boxes(:style_ids, Style.all, :id, :name) do |cb| %>
+				<%= cb.label(class: "checkbox-inline") { cb.check_box(class: "checkbox") + cb.text } %>
+			<% end %>
+			<br><br>
 
 			<span class="picture">
 				<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
